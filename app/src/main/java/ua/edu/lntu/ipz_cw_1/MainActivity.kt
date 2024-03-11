@@ -41,7 +41,7 @@ class MainActivity : ComponentActivity() {
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
                         Image(
-                            modifier = Modifier.size(128.dp),
+                            modifier = Modifier.size(128.dp).background(color = Color.DarkGray),
                             painter = painterResource(id = R.drawable.android_logo),
                             contentDescription = ""
                         )
