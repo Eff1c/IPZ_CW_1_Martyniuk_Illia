@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.MaterialTheme
@@ -30,9 +31,7 @@ class MainActivity : ComponentActivity() {
             IPZ_CW_1_Martyniuk_IlliaTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
-                    modifier = Modifier
-                        .fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
                 ) {
                     Column(
                         modifier = Modifier
@@ -51,41 +50,47 @@ class MainActivity : ComponentActivity() {
                     }
 
                     Column(
-                        modifier = Modifier.fillMaxWidth(),
-                        verticalArrangement = Arrangement.Center,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(bottom = 64.dp),
+                        verticalArrangement = Arrangement.Bottom,
+                        horizontalAlignment = Alignment.CenterHorizontally
                     ) {
-                        Row {
-                            Image(
-                                painter = painterResource(id = R.drawable.ic_phone),
-                                contentDescription = ""
-                            )
-                            Spacer(modifier = Modifier.width(16.dp))
-                            Text(
-                                text = "+380 99 999 99 99",
-                                style = MaterialTheme.typography.bodySmall
-                            )
-                        }
-                        Row {
-                            Image(
-                                painter = painterResource(id = R.drawable.ic_share),
-                                contentDescription = ""
-                            )
-                            Spacer(modifier = Modifier.width(16.dp))
-                            Text(
-                                text = "@martyniuk_illia",
-                                style = MaterialTheme.typography.bodySmall
-                            )
-                        }
-                        Row {
-                            Image(
-                                painter = painterResource(id = R.drawable.ic_message),
-                                contentDescription = ""
-                            )
-                            Spacer(modifier = Modifier.width(16.dp))
-                            Text(
-                                text = "martyniuk.illia@gmail.com",
-                                style = MaterialTheme.typography.bodySmall
-                            )
+                        Column {
+
+                            Row {
+                                Image(
+                                    painter = painterResource(id = R.drawable.ic_phone),
+                                    contentDescription = ""
+                                )
+                                Spacer(modifier = Modifier.width(16.dp))
+                                Text(
+                                    text = "+380 99 999 99 99",
+                                    style = MaterialTheme.typography.bodySmall
+                                )
+                            }
+                            Row {
+                                Image(
+                                    painter = painterResource(id = R.drawable.ic_share),
+                                    contentDescription = ""
+                                )
+                                Spacer(modifier = Modifier.width(16.dp))
+                                Text(
+                                    text = "@martyniuk_illia",
+                                    style = MaterialTheme.typography.bodySmall
+                                )
+                            }
+                            Row {
+                                Image(
+                                    painter = painterResource(id = R.drawable.ic_message),
+                                    contentDescription = ""
+                                )
+                                Spacer(modifier = Modifier.width(16.dp))
+                                Text(
+                                    text = "martyniuk.illia@gmail.com",
+                                    style = MaterialTheme.typography.bodySmall
+                                )
+                            }
                         }
                     }
                 }
