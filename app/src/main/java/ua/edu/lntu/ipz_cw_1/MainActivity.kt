@@ -6,10 +6,12 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -36,6 +38,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Column {
                         Image(
+                            modifier = Modifier.size(128.dp),
                             painter = painterResource(id = R.drawable.android_logo),
                             contentDescription = ""
                         )
@@ -43,7 +46,8 @@ class MainActivity : ComponentActivity() {
                         Text(text = "Backend developer", style = MaterialTheme.typography.bodySmall)
                     }
 
-                    Column {
+                    Column (
+                        verticalArrangement = Arrangement.Center,){
                         Row {
                             Image(
                                 painter = painterResource(id = R.drawable.ic_phone),
