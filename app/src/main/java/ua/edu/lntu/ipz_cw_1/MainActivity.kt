@@ -45,7 +45,7 @@ class MainActivity : ComponentActivity() {
                             painter = painterResource(id = R.drawable.android_logo),
                             contentDescription = ""
                         )
-                        Text(text = "Illya Martyniuk", style = MaterialTheme.typography.bodyLarge)
+                        Text(text = "Illya Martyniuk", style = MaterialTheme.typography.titleLarge)
                         Text(text = "Backend developer", style = MaterialTheme.typography.bodySmall)
                     }
 
