@@ -21,7 +21,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import ua.edu.lntu.ipz_cw_1.ui.theme.IPZ_CW_1_Martyniuk_IlliaTheme
 
 class MainActivity : ComponentActivity() {
@@ -45,7 +47,7 @@ class MainActivity : ComponentActivity() {
                             painter = painterResource(id = R.drawable.android_logo),
                             contentDescription = ""
                         )
-                        Text(text = "Illya Martyniuk", style = MaterialTheme.typography.titleLarge)
+                        Text(text = "Illya Martyniuk", style = TextStyle(fontSize = 46.sp))
                         Text(text = "Backend developer", style = MaterialTheme.typography.bodySmall)
                     }
 
