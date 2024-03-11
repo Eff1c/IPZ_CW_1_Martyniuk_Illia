@@ -1,7 +1,6 @@
 package ua.edu.lntu.ipz_cw_1
 
 import android.os.Bundle
-import android.widget.Space
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
@@ -11,16 +10,16 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import ua.edu.lntu.ipz_cw_1.ui.theme.IPZ_CW_1_Martyniuk_IlliaTheme
 
@@ -32,11 +31,16 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier
-                        .fillMaxSize()
-                        .background(color = Color(0xFFE0E0E0)),
+                        .fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Column {
+                    Column(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(color = Color(0xFF8EDA45)),
+                        verticalArrangement = Arrangement.Center,
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
                         Image(
                             modifier = Modifier.size(128.dp),
                             painter = painterResource(id = R.drawable.android_logo),
@@ -46,8 +50,10 @@ class MainActivity : ComponentActivity() {
                         Text(text = "Backend developer", style = MaterialTheme.typography.bodySmall)
                     }
 
-                    Column (
-                        verticalArrangement = Arrangement.Center,){
+                    Column(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalArrangement = Arrangement.Center,
+                    ) {
                         Row {
                             Image(
                                 painter = painterResource(id = R.drawable.ic_phone),
