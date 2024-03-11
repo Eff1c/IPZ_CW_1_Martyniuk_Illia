@@ -65,10 +65,28 @@ class MainActivity : ComponentActivity() {
                                 style = MaterialTheme.typography.bodySmall
                             )
                         }
-//                        Row {
-//                            Text(text = "Email: ", style = MaterialTheme.typography.bodySmall)
-//                            Text(text = "
-//                    }
+                        Row {
+                            Image(
+                                painter = painterResource(id = R.drawable.ic_share),
+                                contentDescription = ""
+                            )
+                            Spacer(modifier = Modifier.width(16.dp))
+                            Text(
+                                text = "@martyniuk_illia",
+                                style = MaterialTheme.typography.bodySmall
+                            )
+                        }
+                        Row {
+                            Image(
+                                painter = painterResource(id = R.drawable.ic_message),
+                                contentDescription = ""
+                            )
+                            Spacer(modifier = Modifier.width(16.dp))
+                            Text(
+                                text = "martyniuk.illia@gmail.com",
+                                style = MaterialTheme.typography.bodySmall
+                            )
+                        }
                     }
                 }
             }
